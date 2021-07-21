@@ -63,7 +63,6 @@ body{
     transform: rotateX(1, 1, 1, 10deg);
 }
 
-
 */
 .container {
     display: flex;
@@ -74,12 +73,20 @@ body{
     flex-direction: column;
 }
 
-.card img {
+.card1 img {
     width: 100%;
-    height: 335px;
     justify-items: center;
+    height: 350px;
+    object-fit: cover;
+    object-position: center center;
 }
 
-.card {
-    transform: rotateX(5, 5, 15, 50deg);
+.card1{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-inline: 0;
 }
+.card1:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3%);
+  }
