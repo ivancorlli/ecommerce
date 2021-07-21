@@ -88,6 +88,15 @@ body{
     margin-inline: 0;
 }
 .card1:hover {
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    transform: translateY(-2%);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3%);
   }
+
+#copyright {
+  color: white;
+}
+
+.logoEcommerce {
+  width: 120px;
+  margin-top: 5%;
+}
