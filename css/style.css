@@ -79,6 +79,7 @@ body{
     height: 350px;
     object-fit: cover;
     object-position: center center;
+    
 }
 
 .card1{
@@ -87,6 +88,6 @@ body{
     margin-inline: 0;
 }
 .card1:hover {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-    transform: translateY(-3%);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2%);
   }
