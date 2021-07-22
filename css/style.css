@@ -73,7 +73,7 @@ body{
     flex-direction: column;
 }
 
-.card1 img {
+.card1 img, .card-elect {
     width: 100%;
     justify-items: center;
     height: 350px;
@@ -106,8 +106,6 @@ body{
     color: #ffffff;
 }
 
-
-
 .btn1 {
     color: white;
     border-radius: 5px;
@@ -123,7 +121,7 @@ body{
     justify-items: center;
 }
 
-.card1:hover {
+.card1:hover, .card-elect:hover {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     transform: translateY(-3%);
   }
