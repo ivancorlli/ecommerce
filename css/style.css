@@ -82,11 +82,41 @@ body{
     
 }
 
-.card1{
-    margin-top: 0%;
-    margin-bottom: 0%;
-    margin-inline: 0;
+
+.card2 {
+    background-color: #74747496 !important ;
+    color: rgb(255, 255, 255);
+    padding: 1rem 0.7rem 0.4rem;
+    box-shadow: 3px 3px 10px rgb(97, 93, 93);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 250px;
+    margin: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    height: inherit;
+    border-radius: 15px;
+    font-weight: bold;
 }
+
+.card2 .card-icon {
+    font-size: 10rem;
+    color: #ffffff;
+}
+.btn1 {
+    color: white;
+    border-radius: 5px;
+}
+  
+
+.card2 img {
+    width: 75%;
+    height: 200px;
+    justify-items: center;
+}
+
 .card1:hover {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     transform: translateY(-3%);
