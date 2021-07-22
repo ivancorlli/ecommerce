@@ -105,12 +105,18 @@ body{
     font-size: 10rem;
     color: #ffffff;
 }
+
+
+
 .btn1 {
     color: white;
     border-radius: 5px;
 }
   
-
+.btn1:hover{
+    font-size: 4rem;
+    color: #ffffff;
+}
 .card2 img {
     width: 75%;
     height: 200px;
