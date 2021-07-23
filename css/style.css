@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root{
-    --color-1:#a08b8b;
+    --color-1:#BCBCBCBC;
     --color-2:#2A324B;
     --color-3:#FFC857;
     --color-4:#ED254E;
     --color-5:rgb(123, 247, 144);
 }
+
 body{
     background-color: var(--color-1);
     font-family: 'Inter', sans-serif;
