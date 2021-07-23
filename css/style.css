@@ -13,6 +13,23 @@ body{
     background-color: var(--color-1);
     font-family: 'Inter', sans-serif;
 }
+/* navbar */
+
+ul li {
+    display: flex;
+    margin-left: 50px;
+ }
+ .nav-link {
+     text-decoration: none;
+     color: white !important;
+ }
+#boton {
+    border-radius: 10px;
+}
+.nav-link:hover {
+    transform: translateY(2px);
+}
+/* Personalizados */
 .bg-c2-light{
     background-color:#2a324b4a;
 }
@@ -27,6 +44,9 @@ body{
 }
 .cuatrocientos{
     font-family: 'Press Start 2P', cursive;
+}
+.bg-c2{
+    background-color: var(--color-2);
 }
 
 body{
@@ -98,7 +118,6 @@ body{
     height: 350px;
     object-fit: cover;
     object-position: center center;
-    
 }
 .card2 {
     background-color: #74747496 !important ;
