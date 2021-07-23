@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root{
     --color-1:#a08b8b;
@@ -7,7 +8,25 @@
     --color-4:#ED254E;
     --color-5:rgb(123, 247, 144);
 }
-
+body{
+    background-color: var(--color-1);
+    font-family: 'Inter', sans-serif;
+}
+.bg-c2-light{
+    background-color:#2a324b4a;
+}
+.subtitle{
+    font-weight: lighter;
+    color: var(--color-2);
+}
+.custom-link{
+    font-weight: lighter;
+    color: var(--color-4);  
+    text-decoration: none;
+}
+.cuatrocientos{
+    font-family: 'Press Start 2P', cursive;
+}
 
 body{
     font-family: 'Inter', sans-serif;
@@ -72,7 +91,6 @@ body{
     justify-content: center;
     flex-direction: column;
 }
-
 .card1 img, .card-elect {
     width: 100%;
     justify-items: center;
@@ -81,8 +99,6 @@ body{
     object-position: center center;
     
 }
-
-
 .card2 {
     background-color: #74747496 !important ;
     color: rgb(255, 255, 255);
@@ -100,17 +116,14 @@ body{
     border-radius: 15px;
     font-weight: bold;
 }
-
 .card2 .card-icon {
     font-size: 10rem;
     color: #ffffff;
 }
-
 .btn1 {
     color: white;
     border-radius: 5px;
 }
-  
 .btn1:hover{
     font-size: 4rem;
     color: #ffffff;
@@ -120,17 +133,44 @@ body{
     height: 200px;
     justify-items: center;
 }
-
 .card1:hover, .card-elect:hover {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     transform: translateY(-3%);
   }
-
 #copyright {
   color: white;
 }
-
 .logoEcommerce {
-  width: 120px;
+  width: 15rem;
   margin-top: 5%;
+}
+/* Game */
+.bloque{
+    display: flex;
+}
+.grid{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-3);
+}
+.grid div{
+    height: 20px;
+    width: 20px;
+}
+.tetromino{
+    background-color: var(--color-2);
+}
+.mini-grid{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-3);
+    margin-left: 2rem;
+}
+.mini-grid div{
+    height: 20px;
+    width: 20px;
 }
