@@ -9,13 +9,168 @@
     <!-- Custom -->
     <link rel="stylesheet" href="/css/style.css">
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="shortcut icon" href="./assets/logo/ecomprasN.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/logo/ecompras(1).svg" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
+  <header>
+    <!-- inicia el navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #2A324B;"> 
+      <div class="container-fluid">
+        <nav class="navbar navbar-light " style="background-color:#2A324B";>
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="/assets/logo/ecompras(1).svg" alt="Logo" class="w-50">
+            </a>
+          </div>
+        </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item d-flex">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+          </ul>
+          <form class="d-flex mx-4">
+            <button id="boton" class="btn navbar btn-danger mx-lg-2 fw-bold" type="submit">Iniciar</button>
+           <!-- ///////////////////////MODAL REGISTER//////////////////// -->
+
+        <!-- Button trigger modal -->
+            <button type="button" id="boton" class="btn btn-warning fw-bold boton-suscribe text-white" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Registrarse
+            </button>
+
+      <div class="text-center bg-dark">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content background-modal">
+              <!-- HEADER MODAL -->
+              <div class="modal-header">
+                <a href="#" class="modal-register">
+                  <h5 class="modal-title " id="exampleModalLabel"><img src="/assets/logo/ecomprasN.svg"
+                      alt="" width="80px"></h5>
+                </a>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- BODY MODAL -->
+              <div class="modal-body text-modal-body fw-normal">
+                <form class="row g-3">
+                  <div class="col-12">
+                    <label for="inputAddress" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Enter your name">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Enter your surname">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputState" class="form-label">Genero</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>Elegir...</option>
+                      <option>Hombre</option>
+                      <option>Mujer</option>
+                      <option>Otro</option>
+
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Nombre de Usuario</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Example;lb4123">
+
+
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="inputState" class="form-label">Provincia</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>Choose...</option>
+                      <option>Buenos Aires</option>
+                      <option>Catamarca</option>
+                      <option>Chaco</option>
+                      <option>Chubut</option>
+                      <option>Cordoba</option>
+                      <option>Corriente</option>
+                      <option>Entre Ríos</option>
+                      <option>Formosa</option>
+                      <option>Jujuy</option>
+                      <option>La Pampa</option>
+                      <option>La Rioja</option>
+                      <option>Mendoza</option>
+                      <option>Misiones</option>
+                      <option>Neuquén</option>
+                      <option>Rio Negro</option>
+                      <option>Salta</option>
+                      <option>San Juan</option>
+                      <option>San Luis</option>
+                      <option>Santa Cruz</option>
+                      <option>Santa Fe</option>
+                      <option>Santiago del Estero</option>
+                      <option>Tierra del Fuego</option>
+                      <option>Tucumán</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputZip" class="form-label">Localidad</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                  <div class="col-5 mt-5">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">No soy un robot</label>
+                    </div>
+                  </div>
+                  <div class="form-check mt-2 mb-2 col-9">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label " for="flexCheckChecked">
+                      ¿Quieres recibir notificaciones?
+                    </label>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-sing-in">Registrarse</button>
+                  </div>
+                </form>
+              </div>
+              <!-- FOOTER MODAL -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- ////////////////////////////FIN MODAL REGISTER///////////////////// -->
+          </form>
+        </div>
+      </div>
+    </nav>
+<!-- terminnar el navbar -->
+  </header>
+
   <main>
           <!-- Imagenes Destacadas -->
       <section>
