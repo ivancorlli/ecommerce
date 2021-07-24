@@ -30,8 +30,14 @@ ul li {
     transform: translateY(2px);
 }
 /* Personalizados */
+.bg-c2{
+    background-color: var(--color-2);
+}
 .bg-c2-light{
     background-color:#2a324b4a;
+}
+.c2{
+    color: var(--color-2);
 }
 .subtitle{
     font-weight: lighter;
@@ -45,8 +51,16 @@ ul li {
 .cuatrocientos{
     font-family: 'Press Start 2P', cursive;
 }
-.bg-c2{
-    background-color: var(--color-2);
+.input-product{
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    color: black;
+}
+.input-product::placeholder{
+    margin-top: 1rem;
+    font-size: 0.8rem;
 }
 
 body{
