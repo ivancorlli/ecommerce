@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecompras</title>
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/logo/ecompras(1).svg" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <!-- inicia el navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #2A324B;"> 
+      <div class="container-fluid">
+        <nav class="navbar navbar-light " style="background-color:#2A324B";>
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="/assets/logo/ecompras(1).svg" alt="Logo" class="w-50">
+            </a>
+          </div>
+        </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item d-flex">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+          </ul>
+          <form class="d-flex mx-4">
+            <button id="boton" href="/LogIn.html" class="btn navbar btn-danger mx-lg-2 fw-bold" type="submit">Iniciar</button>
+           <!-- ///////////////////////MODAL REGISTER//////////////////// -->
+
+        <!-- Button trigger modal -->
+            <button type="button" id="boton" class="btn btn-warning fw-bold boton-suscribe text-white" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Registrarse
+            </button>
+
+      <div class="text-center bg-dark">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content background-modal">
+              <!-- HEADER MODAL -->
+              <div class="modal-header">
+                <a href="#" class="modal-register">
+                  <h5 class="modal-title " id="exampleModalLabel"><img src="/assets/logo/ecomprasN.svg"
+                      alt="" width="80px"></h5>
+                </a>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- BODY MODAL -->
+              <div class="modal-body text-modal-body fw-normal">
+                <form class="row g-3">
+                  <div class="col-12">
+                    <label for="inputAddress" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Enter your name">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Enter your surname">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputState" class="form-label">Genero</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>Elegir...</option>
+                      <option>Hombre</option>
+                      <option>Mujer</option>
+                      <option>Otro</option>
+
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Nombre de Usuario</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Example;lb4123">
+
+
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="inputState" class="form-label">Provincia</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>Choose...</option>
+                      <option>Buenos Aires</option>
+                      <option>Catamarca</option>
+                      <option>Chaco</option>
+                      <option>Chubut</option>
+                      <option>Cordoba</option>
+                      <option>Corriente</option>
+                      <option>Entre Ríos</option>
+                      <option>Formosa</option>
+                      <option>Jujuy</option>
+                      <option>La Pampa</option>
+                      <option>La Rioja</option>
+                      <option>Mendoza</option>
+                      <option>Misiones</option>
+                      <option>Neuquén</option>
+                      <option>Rio Negro</option>
+                      <option>Salta</option>
+                      <option>San Juan</option>
+                      <option>San Luis</option>
+                      <option>Santa Cruz</option>
+                      <option>Santa Fe</option>
+                      <option>Santiago del Estero</option>
+                      <option>Tierra del Fuego</option>
+                      <option>Tucumán</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputZip" class="form-label">Localidad</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                  <div class="col-5 mt-5">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">No soy un robot</label>
+                    </div>
+                  </div>
+                  <div class="form-check mt-2 mb-2 col-9">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label " for="flexCheckChecked">
+                      ¿Quieres recibir notificaciones?
+                    </label>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-sing-in">Registrarse</button>
+                  </div>
+                </form>
+              </div>
+              <!-- FOOTER MODAL -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- ////////////////////////////FIN MODAL REGISTER///////////////////// -->
+          </form>
+        </div>
+      </div>
+    </nav>
+<!-- terminnar el navbar -->
+  </header>
+
+  <main>   
+    
+    <div class="row g-0">
+
+      <div class="col-lg-5 d-flex flex-column mb-1 bg-secondary">
+
+        <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 text-logo">
+          <a href="/index.html"> <img src="/assets/logo/ecompras(1).png" alt="" width="100px" /></a>
+
+        </div>
+        <div class="px-lg-5 py-lg-4 p-4">
+          <h2 class="mb-4" style="color:white;">Iniciar Sesión</h2>
+          <form class="mb-5">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label fw-bold text-white">Email o usuario</label>
+              <input type="email" class="form-control bg-dark-x border-0" placeholder="Introduzca su email"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
+
+            </div>
+            <div class="mb-3 fw-bold">
+              <label for="exampleInputPassword1" class="form-label text-white">Contraseña</label>
+              <input type="password" class="form-control bg-dark-x border-0" placeholder="Introduzca su contraseña"
+                id="exampleInputPassword1">
+              <div id="emailHelp" class="form-text pt-3"> <a href="#exampleModal1" data-bs-toggle="modal">¿Olvidaste tu Contraseña?</a>
+              </div>
+              <div class="col-12 fw-bold mt-4 pb-2 fs-">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                  <label class="form-check-label for="inlineFormCheck">
+                    Recuérdame
+                  </label>
+                </div>
+              </div>
+
+              <!-- ////////////////////RECUPERAR CONTRASEÑA///////////////////// -->
+
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content bg-recuperar-contraseña">
+                    <!-- header modal -->
+                    <div class="modal-header text-dark recover-password w-100 justify-content-center">
+                      <h5 class="modal-title" id="exampleModalLabel">Recuperar Contraseña</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- body modal -->
+                    <div class="modal-body">
+                      <h6 class="text-dark fw-bold">¿Tienes problemas para iniciar sesión?</h6>
+                      <p class="text-dark fw-normal">Ingrese su correo electrónico o número de teléfono y le enviaremos un enlace con los pasos para recuperar su contraseña.</p>
+                      <div class="col-12">
+
+                        <input type="text" class="form-control" id="inputAddress2"
+                          placeholder="Email o Numero de telefono...">
+                        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">Enviar enlace</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- //////////////////////////LOGIN//////////////////////// -->
+
+            <button type="submit" class="btn1 btn-primary1 w-100 fw-bold text-dark">Iniciar Sesión</button>
+          </form>
+          <p class="text-center parrafo">Iniciar Sesión con</p>
+          <div class="d-flex justify-content-around">
+            <button type="submit" class="google-fb btn btn-outline-light flex-grow-1 m-2"><i
+                class="fab fa-google lead me-2"></i> Google</button>
+            <button type="submit" class="google-fb btn btn-outline-light flex-grow-1 m-2"><i
+                class="fab fa-facebook-f me-2"></i> Facebook</button>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class=" parrafo d-inline-block fw-bold"> ¿No tienes una cuenta?
+            <!-- ////////////////////////MODAL REGISTER////////////////////////// -->
+          <div>
+            <button type="button" class="btn btn-outline-secondary btn-register btn-warning text-white fw-bold"  data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              Registrarse
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content background-modal">
+                  <!-- HEADER MODAL -->
+                  <div class="modal-header">
+                    <a href="#" class="modal-register">
+                      <h5 class="modal-title " id="exampleModalLabel"><img src="/assets/logo/ecompras(1).svg"
+                          alt="" width="80px">Ecommerce</h5>
+                    </a>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!-- BODY MODAL -->
+                  <div class="modal-body text-modal-body">
+                    <form class="row g-3">
+                      <div class="col-12">
+                        <label for="inputAddress" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Introduzca su nombre">
+                      </div>
+                      <div class="col-12">
+                        <label for="inputAddress2" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Introduzca su apellido">
+                      </div>
+                      <div class="col-md-7">
+                        <label for="inputState" class="form-label">Genero</label>
+                        <select id="inputState" class="form-select">
+                          <option selected>Elegir...</option>
+                          <option>Hombre</option>
+                          <option>Mujer</option>
+                          <option>Otro</option>
+
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Nombre de usuario</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Example;lb4123">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="@gmail.com">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Confirmar contraseña</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                      </div>
+
+                      <div class="col-md-4">
+                        <label for="inputState" class="form-label">Provincia</label>
+                        <select id="inputState" class="form-select">
+                          <option selected>Elegir...</option>
+                          <option>Buenos Aires</option>
+                          <option>Catamarca</option>
+                          <option>Chaco</option>
+                          <option>Chubut</option>
+                          <option>Cordoba</option>
+                          <option>Corriente</option>
+                          <option>Entre Ríos</option>
+                          <option>Formosa</option>
+                          <option>Jujuy</option>
+                          <option>La Pampa</option>
+                          <option>La Rioja</option>
+                          <option>Mendoza</option>
+                          <option>Misiones</option>
+                          <option>Neuquén</option>
+                          <option>Rio Negro</option>
+                          <option>Salta</option>
+                          <option>San Juan</option>
+                          <option>San Luis</option>
+                          <option>Santa Cruz</option>
+                          <option>Santa Fe</option>
+                          <option>Santiago del Estero</option>
+                          <option>Tierra del Fuego</option>
+                          <option>Tucumán</option>
+                        </select>
+                      </div>
+                      <div class="col-md-8">
+                        <label for="inputZip" class="form-label">Localidad</label>
+                        <input type="text" class="form-control" id="inputZip">
+                      </div>
+                      <div class="col-5 mt-5">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                          <label class="form-check-label" for="flexSwitchCheckDefault">No soy un robot</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-sing-in">Registrarse</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- FOOTER MODAL -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal">Cerrar</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- //////////////CARROUSEL//////////////// -->
+      <div class="col-lg-7 d-none d-lg-block">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner mb-1">
+            <div class="carousel-item min-vh-100 active">
+              <img src="/assets/img/1.png" class=" d-block w-100 img-fluid">
+            </div>
+            <div class="carousel-item min-vh-100">
+              <img src="assets/img/2.png" class=" d-block w-100 img-fluid">
+            </div>
+            <div class="carousel-item min-vh-100 ">
+              <img src="assets/img/3.png" class="d-block w-100 img-fluid">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+    <!-- footer -->
+    <footer class="bg-secondary text-dark">
+      <div class="container">
+        <div class="row">
+          <a href="#"class="col-12 col-sm-4 text-reset text-uppercase d-flex align-items-center text-center">
+            <div class="col-12 col-sm-3 text-center">
+              <img
+                src="./assets/logo/ecompras(1).svg"
+                class="logoEcommerce"
+                alt="logo de Ecommerce"/>
+            </div>
+          </a>
+          <ul class="col-12 col-sm-4 list-unstyled col-lg align-items-center mt-2 text-center">
+            <li class="font-weight-bold text-uppercase text-center">
+              Seguinos
+            </li>
+            <li>
+              <a href="https://www.facebook.com/"target="_blank"class="text-reset text-center">
+                <i class="fab fa-facebook-f"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.Instagram.com/"target="_blank"
+                class="text-reset text-center">
+                <i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.Twitter.com/"target="_blank" class="text-reset text-center">
+                <i class="fab fa-twitter"></i> Twitter</a>
+            </li>
+          </ul>
+          <ul
+            class="col-12 col-sm-4 list-unstyled col-lg align-items-center mt-2 text-center">
+            <li>
+              <a href="/pages/error404.html" class="text-reset text-center">Privacidad</a>
+            </li>
+            <li>
+              <a href="/pages/about-us.html" class="text-reset text-center">Acerca de nosotros</a>
+            </li>
+            <li>
+              <a href="/pages/error404.html"  class="text-reset text-center">Ayuda</a>
+            </li>
+          </ul>
+          <div class="col-12 text-center bg-secondary">
+          <p>&copy; Copyright <a id="copyright" >2021 Ecompras S.R.L.</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>  
+
+    <script src="/js/app.js"></script>
+    <!--Bootstrap Js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
