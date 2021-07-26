@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // accedemos a cada bloque
       current.forEach(index => {
           // Le agregamos la clase
-        // squares[currentPosition + index].classList.add('tetromino')
         squares[currentPosition + index].style.backgroundColor = colors[random]
         bgColor()
       })
@@ -99,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Quitar el dibujo quitando la clase
     function undraw() {
       current.forEach(index => {
-        // squares[currentPosition + index].classList.remove('tetromino')
         squares[currentPosition + index].style.backgroundColor = ''
       })
     }

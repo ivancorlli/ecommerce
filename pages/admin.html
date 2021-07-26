@@ -17,18 +17,18 @@
 <body>
 <!-- Boton modal AGREGAR -->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProduct">
     <i class="fas fa-plus-circle"></i> Nuevo
   </button>
   
   <!-- Modal -->
-  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade " id="modalProduct" tabindex="-1" aria-labelledby="modalProductLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content ">
         <div class="modal-header bg-c2">
             <div class="container d-flex flex-row justify-content-around">
                 <img src="/assets/logo/ecompras(1).svg" alt="logo" class="w-25">
-                <span class="modal-title text-light h6" id="exampleModalLabel">Aniadir Producto</span>
+                <span class="modal-title text-light h6" id="modalProductLabel">Aniadir Producto</span>
             </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -36,7 +36,7 @@
             <form class="container">
                 <div class="row">
                     <label class="c2 fw-bold my-1" for="code">Codigo</label>
-                    <input class="input-product bg-c2-light" type="number" name="code" id="code" value="500">
+                    <input class="input-product bg-c2-light text-center" type="number" name="code" id="code" >
                 </div>
                 <div class="row">
                     <label class="c2 fw-bold my-1" for="name">Nombre</label>
@@ -69,10 +69,34 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-success" onclick="guardarProducto()">Guardar</button>
+          <button type="button" class="btn btn-success" id="saveProduct">Guardar</button>
         </div>
       </div>
     </div>
+  </div>
+  <!-- Listado -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="text-center bg-success mt-5"> Mis Productos</h4>
+        <table class= "table table-hover" id="myProducts">
+      <thead>
+        <tr>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Categoria</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+          
+      </tbody>
+    </table>
+      </div>
+    </div>
+    
   </div>
 
     
