@@ -9,71 +9,76 @@
     <!-- Custom -->
     <link rel="stylesheet" href="/css/style.css">
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-<link rel="shortcut icon" href="/assets/logo/ecompras(1).svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/logo/ecompras(1).svg" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-<!-- Boton modal AGREGAR -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProduct">
-    <i class="fas fa-plus-circle"></i> Nuevo
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade " id="modalProduct" tabindex="-1" aria-labelledby="modalProductLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content ">
-        <div class="modal-header bg-c2">
-            <div class="container d-flex flex-row justify-content-around">
-                <img src="/assets/logo/ecompras(1).svg" alt="logo" class="w-25">
-                <span class="modal-title text-light h6" id="modalProductLabel">Aniadir Producto</span>
-            </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body ">
-            <form class="container">
-                <div class="row">
-                    <label class="c2 fw-bold my-1" for="code">Codigo</label>
-                    <input class="input-product bg-c2-light text-center" type="number" name="code" id="code" >
-                </div>
-                <div class="row">
-                    <label class="c2 fw-bold my-1" for="name">Nombre</label>
-                    <input class="input-product bg-c2-light" type="text" name="name" placeholder="Nombre" id="name">
-                </div>
-                <div class="row">
-                    <label class="c2 fw-bold my-1" for="category">Categoria</label>
-                    <select class="input-product bg-c2-light" name="category" id="category">
-                        <option value="none" selected >Seleccionar...</option>
-                        <option value="deportes">Deportes</option>
-                        <option value="electrodomesticos">Electrodomesticos</option>
-                        <option value="maquillaje">Maquillaje</option>
-                        <option value="supermercado">Supermercado</option>
-                    </select>
-                </div>
-                <div class="row">
-                    <label class="c2 fw-bold my-1" for="price">Precio</label>
-                    <input class="input-product bg-c2-light" type="number" name="price" placeholder="$$$" id="price">
-                </div>
-                <div class="row">
-                    <label class="c2 fw-bold my-1" for="stock">Stock</label>
-                    <input class="input-product bg-c2-light" type="number" name="stock" placeholder="Disponibilidad" id="stock">
-                </div>
-                <div class="row">
-                    <label class="c2 fw-bold my-1" for="description">Descripcion</label>
-                    <textarea class="input-product bg-c2-light" name="description" placeholder="Cuales son las caracteristicas del producto ?" id="desription" cols="16" rows="5"></textarea>
-                </div>
+  <section>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProduct">
+      <i class="fas fa-plus-circle"></i> Nuevo
+    </button>
+    <!-- Modal -->
+    <div class="modal fade " id="modalProduct" tabindex="-1" aria-labelledby="modalProductLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content ">
+          <div class="modal-header bg-c2">
+              <div class="container d-flex flex-row justify-content-around">
+                  <img src="/assets/logo/ecompras(1).svg" alt="logo" class="w-25">
+                  <span class="modal-title text-light h6" id="modalProductLabel">Aniadir Producto</span>
+              </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body ">
+              <form class="container" id="formProduct">
+                  <div class="row">
+                      <label class="c2 fw-bold my-1" for="code">Codigo</label>
+                      <input class="input-product bg-c2-light text-center" type="text" name="code" id="code" >
+                      <p class="code text-dark p-3 fw-bold d-none" >El codigo tiene que tener de 4 a 16 caracteres y pueden ser letras, numeros, guion y guion bajo.</p>
+                  </div>
+                  <div class="row">
+                      <label class="c2 fw-bold my-1" for="name">Nombre</label>
+                      <input class="input-product bg-c2-light" type="text" name="name" placeholder="Nombre" id="name">
+                      <p class="name text-dark p-3 fw-bold d-none" >El nombre tiene que tener de 4 a 16 caracteres y pueden ser letras, numeros, guion y guion bajo.</p>
+                  </div>
+                  <div class="row">
+                      <label class="c2 fw-bold my-1" for="category">Categoria</label>
+                      <select class="input-product py-1 px-2 bg-c2-light" name="category" id="category">
+                          <option value="none" selected >Seleccionar...</option>
+                          <option value="deportes">Deportes</option>
+                          <option value="electrodomesticos">Electrodomesticos</option>
+                          <option value="maquillaje">Maquillaje</option>
+                          <option value="supermercado">Supermercado</option>
+                      </select>
+                  </div>
+                  <div class="row">
+                      <label class="c2 fw-bold my-1" for="price">Precio</label>
+                      <input class="input-product bg-c2-light" type="number" name="price" placeholder="$$$" id="price">
+                      <p class="price text-dark p-3 fw-bold d-none" >El precio solo puede conter numeros.</p>
+                  </div>
+                  <div class="row">
+                      <label class="c2 fw-bold my-1" for="stock">Stock</label>
+                      <input class="input-product bg-c2-light" type="number" name="stock" placeholder="Disponibilidad" id="stock">
+                      <p class="stock text-dark p-3 fw-bold d-none" >El stock solo puede conter numeros.</p>
+                  </div>
+                  <div class="row">
+                      <label class="c2 fw-bold my-1" for="description">Descripcion</label>
+                      <textarea class="input-product bg-c2-light" name="description" placeholder="Cuales son las caracteristicas del producto ?" id="desription" cols="16" rows="5"></textarea>
+                  </div>
 
-            </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-success" id="saveProduct">Guardar</button>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-success disabled" id="saveProduct">Guardar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+<!-- Boton modal AGREGAR -->
+
   <!-- Listado -->
   <div class="container">
     <div class="row">

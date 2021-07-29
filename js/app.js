@@ -1,7 +1,11 @@
 // Accedemos a todos los forms
-let form = document.forms[0];
+const form =  document.querySelectorAll('#formProduct input, select, textarea')
 let productList = [];
-
+let btnSave =document.querySelector('#saveProduct');
+const expres = {
+    text: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+    numbers: /^\d{0,14}$/ // 0 a 14 numeros.
+}
 class Product{
     constructor (code,name,category,price,stock,description){
         this.code = code;
@@ -34,7 +38,67 @@ function getProduct(){
     return productList;
 }
 
-document.querySelector('#saveProduct').addEventListener('click', saveProduct);
+btnSave.addEventListener('click', saveProduct);
+// Validar campos
+// Tomando todo el array de los inputs del formulario usamos foreach para acceder a cada uno
+form.forEach((input) => {
+    // a cada input lo escuchamos cuando se levanta una tecla
+   input.addEventListener('keyup', () => {
+        // clasificamos a ese input escuchado por su atributo    
+       switch (input.getAttribute('name')){
+        //    Si los atrbutos coinciden con cada caso le aplicamos la expresion regular para validar
+        case 'code':
+            // Expres es un objeto con las validaciones guardadas
+            if(expres.text.test(input.value)){
+                // Si la valdacion coincide con el valor ingresado en el input le aplicamos la clase
+                document.querySelector('#code').classList.add('formulario_correcto')
+                // Si la validacion es correcta quitamos la clase de incerrecto
+                document.querySelector('#code').classList.remove('formulario_incorrecto')
+                // Quitamos la visibilidad del texto que nos marca el error
+                document.querySelector('.code').classList.add('d-none')
+            }else{  
+                document.querySelector('#code').classList.remove('formulario_correcto')
+                document.querySelector('#code').classList.add('formulario_incorrecto')
+                document.querySelector('.code').classList.remove('d-none')
+            }
+        break;
+        case 'name':
+            if(expres.text.test(input.value)){
+                document.querySelector('#name').classList.add('formulario_correcto')
+                document.querySelector('#name').classList.remove('formulario_incorrecto')
+                document.querySelector('.name').classList.add('d-none')
+            }else{  
+                document.querySelector('#name').classList.remove('formulario_correcto')
+                document.querySelector('#name').classList.add('formulario_incorrecto')
+                document.querySelector('.name').classList.remove('d-none')
+            }
+        break;
+        case 'price':
+            if(expres.numbers.test(input.value)){
+                document.querySelector('#price').classList.add('formulario_correcto')
+                document.querySelector('#price').classList.remove('formulario_incorrecto')
+                document.querySelector('.price').classList.add('d-none')
+            }else{  
+                document.querySelector('#price').classList.remove('formulario_correcto')
+                document.querySelector('#price').classList.add('formulario_incorrecto')
+                document.querySelector('.price').classList.remove('d-none')
+            }
+        break;
+        case 'stock':
+            if(expres.numbers.test(input.value)){
+                document.querySelector('#stock').classList.add('formulario_correcto')
+                document.querySelector('#stock').classList.remove('formulario_incorrecto')
+                document.querySelector('.stock').classList.add('d-none')
+            }else{  
+                document.querySelector('#stock').classList.remove('formulario_correcto')
+                document.querySelector('#stock').classList.add('formulario_incorrecto')
+                document.querySelector('.stock').classList.remove('d-none')
+            }
+        break;
+        
+    }
+   })
+})
 
 productTable();
 
@@ -76,6 +140,11 @@ function productTable (){
         tbody.appendChild(row);
     }
 }
+
+
+
+
+
 
 
 
