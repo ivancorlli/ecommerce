@@ -54,24 +54,25 @@
                   </div>
                   <div class="row">
                       <label class="c2 fw-bold my-1" for="price">Precio</label>
-                      <input class="input-product bg-c2-light" type="number" name="price" placeholder="$$$" id="price">
+                      <input class="input-product bg-c2-light" type="text" name="price" placeholder="$$$" id="price">
                       <p class="price text-dark p-3 fw-bold d-none" >El precio solo puede conter numeros.</p>
                   </div>
                   <div class="row">
                       <label class="c2 fw-bold my-1" for="stock">Stock</label>
-                      <input class="input-product bg-c2-light" type="number" name="stock" placeholder="Disponibilidad" id="stock">
+                      <input class="input-product bg-c2-light" type="text" name="stock" placeholder="Disponibilidad" id="stock">
                       <p class="stock text-dark p-3 fw-bold d-none" >El stock solo puede conter numeros.</p>
                   </div>
                   <div class="row">
                       <label class="c2 fw-bold my-1" for="description">Descripcion</label>
-                      <textarea class="input-product bg-c2-light" name="description" placeholder="Cuales son las caracteristicas del producto ?" id="desription" cols="16" rows="5"></textarea>
+                      <textarea class="input-product bg-c2-light" name="description" placeholder="Cuales son las caracteristicas del producto ?" id="description" cols="16" rows="5"></textarea>
                   </div>
 
               </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="close">Cerrar</button>
             <button type="button" class="btn btn-success disabled" id="saveProduct">Guardar</button>
+
           </div>
         </div>
       </div>
