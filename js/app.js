@@ -141,6 +141,17 @@ function productTable (){
     }
 }
 
+//Validación LogIn
+function validarLogIn(){
+    var idemail, password1;
+    idemail = document.getElementById("emailLogIn").value;
+    password1 = document.getElementById("passwordLogIn").value;
+  
+    if(idemail=="" || password1==""){
+      alert("Todos los campos son obligatorios. Por favor, completalos e intentá nuevamente");
+      return false;
+    }
+  }
 
 
 

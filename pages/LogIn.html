@@ -181,22 +181,23 @@
           <a href="/index.html"> <img src="/assets/logo/ecompras(1).png" alt="" width="100px" /></a>
 
         </div>
-        <div class="px-lg-5 py-lg-4 p-4">
-          <h2 class="mb-4" style="color:white;">Iniciar Sesión</h2>
-          <form class="mb-5">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label fw-bold text-white">Email o usuario</label>
-              <input type="email" class="form-control bg-dark-x border-0" placeholder="Introduzca su email"
-                id="exampleInputEmail1" aria-describedby="emailHelp">
 
+
+        <div class="px-lg-5 py-lg-4 p-4" onsubmit="validarLogin();">
+          <h2 class="mb-4" style="color:white;">Iniciar Sesión</h2>
+          <form class="mb-3" onsubmit="validarLogIn();">
+            <div class="mb-2">
+              <label for="exampleInputEmail1" class="form-label fw-bold text-white">Email</label>
+              <input type="email" class="form-control bg-dark-x border-0" placeholder="Introduzca su email"
+                id="emailLogIn" aria-describedby="emailHelp">
             </div>
-            <div class="mb-3 fw-bold">
+            <div class="mb-2 fw-bold">
               <label for="exampleInputPassword1" class="form-label text-white">Contraseña</label>
               <input type="password" class="form-control bg-dark-x border-0" placeholder="Introduzca su contraseña"
-                id="exampleInputPassword1">
-              <div id="emailHelp" class="form-text pt-3"> <a href="#exampleModal1" data-bs-toggle="modal">¿Olvidaste tu Contraseña?</a>
+                id="passwordLogIn">
+              <div id="emailHelp" class="form-text pt-3 bg-secondary"> <a href="#exampleModal1" data-bs-toggle="modal">¿Olvidaste tu Contraseña?</a>
               </div>
-              <div class="col-12 fw-bold mt-4 pb-2 fs-">
+              <div class="col-12 fw-bold mt-4 pb-1 fs-">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="inlineFormCheck">
                   <label class="form-check-label for="inlineFormCheck">
@@ -234,9 +235,9 @@
 
             <!-- //////////////////////////LOGIN//////////////////////// -->
 
-            <button type="submit" class="btn1 btn-primary1 w-100 fw-bold text-dark">Iniciar Sesión</button>
+            <button type="submit" onclick="return validarLogin();" class="btn1 btn-primary1 bg-success w-100 fw-bold text-white"><h3>Iniciar Sesión</h3></button>
           </form>
-          <p class="text-center parrafo">Iniciar Sesión con</p>
+          <p class="text-center parrafo text-white">Iniciar Sesión con</p>
           <div class="d-flex justify-content-around">
             <button type="submit" class="google-fb btn btn-outline-light flex-grow-1 m-2"><i
                 class="fab fa-google lead me-2"></i> Google</button>
@@ -248,7 +249,7 @@
           <p class=" parrafo d-inline-block fw-bold"> ¿No tienes una cuenta?
             <!-- ////////////////////////MODAL REGISTER////////////////////////// -->
           <div>
-            <button type="button" class="btn btn-outline-secondary btn-register btn-warning text-white fw-bold"  data-bs-toggle="modal"
+            <button type="button" class="btn btn-outline-secondary btn-register btn-warning text-white fw-bold mb-2"  data-bs-toggle="modal"
               data-bs-target="#exampleModal">
               Registrarse
             </button>
@@ -361,9 +362,9 @@
       </div>
 
       <!-- //////////////CARROUSEL//////////////// -->
-      <div class="col-lg-7 d-none d-lg-block">
+      <div class="col-lg-7 d-none d-lg-block ">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
+          <div class="carousel-indicators ">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
               aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
@@ -404,7 +405,7 @@
           <a href="#"class="col-12 col-sm-4 text-reset text-uppercase d-flex align-items-center text-center">
             <div class="col-12 col-sm-3 text-center">
               <img
-                src="./assets/logo/ecompras(1).svg"
+                src="/assets/logo/ecompras(1).svg"
                 class="logoEcommerce"
                 alt="logo de Ecommerce"/>
             </div>
