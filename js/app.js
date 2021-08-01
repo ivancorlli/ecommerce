@@ -104,15 +104,13 @@ function productTable (){
         codigoCell= row.insertCell(0);
         nombreCell= row.insertCell(1);
         categoriaCell= row.insertCell(2);
-        descripcionCell= row.insertCell(3);
-        precioCell= row.insertCell(4);
-        stockCell= row.insertCell(5);
-        selectCell= row.insertCell(6);
+        precioCell= row.insertCell(3);
+        stockCell= row.insertCell(4);
+        selectCell= row.insertCell(5);
 
         codigoCell.innerHTML = list[i].code;
         nombreCell.innerHTML = list[i].name;
         categoriaCell.innerHTML = list[i].category;
-        descripcionCell.innerHTML = list[i].description;
         precioCell.innerHTML = list[i].price;
         stockCell.innerHTML = list[i].stock;
 
@@ -152,6 +150,20 @@ form.forEach(el => {
     });
     checkSave()
 }
+
+//Validación LogIn
+function validarLogIn(){
+    var idemail, password1;
+    idemail = document.getElementById("emailLogIn").value;
+    password1 = document.getElementById("passwordLogIn").value;
+  
+    if(idemail=="" || password1==""){
+      alert("Todos los campos son obligatorios. Por favor, completalos e intentá nuevamente");
+      return false;
+    }
+  }
+
+
 
 
 
