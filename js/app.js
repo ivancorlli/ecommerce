@@ -113,6 +113,8 @@ function productTable (){
         categoriaCell.innerHTML = list[i].category;
         precioCell.innerHTML = list[i].price;
         stockCell.innerHTML = list[i].stock;
+        cell.innerHTML=`<a>Edit</a>
+                        <a>Delete</a>`;
 
         tbody.appendChild(row);
     }
