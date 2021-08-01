@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="shortcut icon" href="/assets/logo/ecompras(1).svg" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-c3">
+      <div class="container-fluid ">
+        <a class="w-25" href="/index.html">
+          <img class="img-fluid w-75"  src="/assets/logo/ecompras(1).svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav text-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/nosotros/about-us.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a id="boton" href="/pages/login/login.html" class="btn  btn-danger my-2 mx-lg-2 fw-bold" type="button">Iniciar</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" id="boton" class="btn btn-warning my-2 fw-bold boton-suscribe text-white" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Registrarse
+            </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main >
+
+    <!-- Wodal Registro -->
+    <section class="d-flex mx-4">
+    <div class="text-center">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content background-modal">
+            <!-- HEADER MODAL -->
+            <div class="modal-header">
+              <a href="#" class="modal-register">
+                <h5 class="modal-title " id="exampleModalLabel"><img src="/assets/logo/ecomprasN.svg"
+                    alt="" width="80px"></h5>
+              </a>
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- BODY MODAL -->
+            <div class="modal-body text-modal-body fw-normal">
+              <form class="row g-3">
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label" >Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress2" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="subname" placeholder="Enter your surname" required>
+                </div>
+                <div class="col-md-12">
+                  <label for="inputEmail4" class="form-label" >Correo Electronico</label>
+                  <input type="email" class="form-control" id="email" placeholder="Example luis@hotmail.com" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+
+
+                </div>
+
+                <div class="col-md-12">
+                  <label for="inputPassword4" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="password" required>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary fw-bold mt-2" id="btnSubmit" onclick="registrarUsuario();" 
+                   >Registrarse</button>
+                </div>
+              </form>
+            </div>
+            <!-- FOOTER MODAL -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+  <!--inicio carrousel-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/img/banner1.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-md-block text-dark">
+          <h1>Hacé crecer tu emprendimiento</h1>
+          <p>Te brindamos asesoramiento personalizado para dar tus primeros pasos</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/img/banner2.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-md-block text-dark">
+          <h1>Trabajamos para vos</h1>
+          <p>Nos especializamos en E-commerce</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/img/banner3.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-md-block text-dark">
+          <h1>Conocé a nuestro equipo</h1>
+          <p>Nosotros tenemos ganas de conocerte a vos</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--Fin carrousel-->
+
+  <!--Inicio cards about-us-->
+  <div class="row d-flex justify-content-center w-100">
+
+    <div class="col-sm-10 col-lg-5 mt-2 mb-5 text-center col-xxl-3">
+      <div class="card2 h-100 bg-success">
+        <div class="card-icon">
+          <img src="/assets/img/ivan.png">
+        </div>
+        <div class="card-title fs-5">
+          Ivan Corlli
+        </div>
+        <div class="card-content text-gray">
+          <h4>Scrum Master</h4>
+          <p>21 años. Estudiante.</p>
+        </div>
+        <div class="card-footer">
+          corlliivan@gmail.com
+        </div>
+        <a href="#" class="btn1">
+          <i class="fas fa-envelope"></i>
+        </a>
+       </div>
+    </div>
+    <div class="col-sm-10 col-lg-5 mt-2 mb-5 text-center col-xxl-3">
+      <div class="card2 h-100 bg-danger">
+        <div class="card-icon">
+          <img src="/assets/img/pablo.png">
+        </div>
+        <div class="card-title fs-5">
+          Pablo Coronel
+        </div>
+        <div class="card-content text-gray">
+          <h4>Scrum Development Team</h4>
+          <p>32 años. CPN.</p>
+        </div>
+        <div class="card-footer">
+          pablomcoronel1396@gmail.com
+        </div>
+        <a href="#" class="btn1">
+          <i class="fas fa-envelope "></i>
+        </a>
+
+      </div>
+    </div>
+    <div class="col-sm-10 col-lg-5 mt-2 mb-5 text-center col-xxl-3">
+      <div class="card2 h-100 bg-warning">
+        <div class="card-icon">
+          <img src="/assets/img/ro.png">
+        </div>
+        <div class="card-title fs-5">
+          Rocio Mercado
+        </div>
+        <div class="card-content text-gray">
+          <h4>Scrum Development Team</h4>
+          <p>24 años.Estudiante.</p>
+        </div>
+        <div class="card-footer ">
+          romercado97@gmail.com
+        </div>
+        <a href="#" class="btn1">
+          <i class="fas fa-envelope"></i>
+        </a>
+
+      </div>
+    </div>
+    <div class="col-sm-10 col-lg-5 mt-2 mb-5 text-center col-xxl-3">
+      <div class="card2 h-100 bg-info">
+        <div class="card-icon">
+          <img src="/assets/img/cris.png">
+        </div>
+        <div class="card-title fs-5">
+          Cristian Zanesky
+        </div>
+        <div class="card-content text-gray">
+          <h4>Scrum Development Team</h4>
+          <p>26 años. Abogado.</p>
+        </div>
+        <div class="card-footer">
+          crisz_zanesky@hotmail.com
+        </div>
+        <a href="#" class="btn1">
+          <i class="fas fa-envelope"></i>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+<!--Fin cards about-us -->
+
+</main>
+
+
+
+<!-- footer -->
+<footer class="bg-c3 text-dark">
+  <div class="container">
+    <div class="row">
+      <a href="/index.html"class="col-12 col-sm-4 text-reset text-uppercase d-flex align-items-center text-center">
+          <img
+            src="/assets/logo/ecompras(1).svg"
+            class="logoEcommerce w-75 mt-3 ms-5"
+            alt="logo de Ecommerce"/>
+      </a>
+      <ul class="col-12 col-sm-4 list-unstyled col-lg align-items-center mt-2 text-center">
+        <li class="font-weight-bold text-uppercase text-center">
+          Seguinos
+        </li>
+        <li>
+          <a href="https://www.facebook.com/"target="_blank"class="text-reset text-center">
+            <i class="fab fa-facebook-f"></i> Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.Instagram.com/"target="_blank"
+            class="text-reset text-center">
+            <i class="fab fa-instagram"></i> Instagram</a>
+        </li>
+        <li>
+          <a href="https://www.Twitter.com/"target="_blank" class="text-reset text-center">
+            <i class="fab fa-twitter"></i> Twitter</a>
+        </li>
+      </ul>
+      <ul
+        class="col-12 col-sm-4 list-unstyled col-lg align-items-center mt-2 text-center">
+        <li>
+          <a href="/pages/error404.html" class="text-reset text-center">Privacidad</a>
+        </li>
+        <li>
+          <a href="/pages/about-us.html" class="text-reset text-center">Acerca de nosotros</a>
+        </li>
+        <li>
+          <a href="/pages/error404.html"  class="text-reset text-center">Ayuda</a>
+        </li>
+      </ul>
+      <div class="col-12 text-center ">
+      <p>&copy; Copyright <a id="copyright" >2021 Ecompras S.R.L.</a></p>
+      </div>
+    </div>
+  </div>
+</footer>  
+    <script src="/js/app.js"></script>
+    <!--Bootstrap Js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
