@@ -123,6 +123,10 @@ body{
 }
 .text-w{
     color: white;
+
+}
+.text-w:hover{
+    color:wheat;
 }
 /* .logoEcommerce {
   width: 15rem;
