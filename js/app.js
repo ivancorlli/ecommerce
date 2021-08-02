@@ -164,6 +164,49 @@ function validarLogIn(){
   }
 
 
+  // Validacion de Formulario de Contacto.
+(function (){
+let matter = document.getElementById('matter');
+let name1 = document.getElementById('name1');
+let massage = document.getElementById('massage');
+
+let validarCampo = function (e){
+  if (
+    formulario.name.value == 0 ||
+    formulario.matter.value == 0 ||
+    formulario.message.value == 0
+  ) {
+    alert("Debe completar todos los campos");
+  }
+};
+let validar = function (e){
+  validarCampo(e);
+};
+formulario.addEventListener ('submit', validar);
+}())
+
+// Enviar email al administrador
+
+var params = {
+  from: document.getElementById("email").value,
+  to: "pablomcoronel1369@gmail.com",
+  mensaje: document.getElementById("massage").value,
+};
+
+
+emailjs.send("service_ysk1goe", "template_9pp3njm", params).then(
+  function (response) {
+    console.log("SUCCESS!", response);
+  },
+  function (error) {
+    console.log("FAILED...", error);
+  }
+);
+
+
+
+
+
 
 
 
