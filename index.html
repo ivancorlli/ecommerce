@@ -208,38 +208,38 @@
     </div>
   </section>
     <!-- Seccion Contacto -->
-   <section id="contacto"  class="">
+   <section id="contact"  class="">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <h5 class="text-center text-dark m-3">Escribe tu consulta</h5>
-            <form action="">
+            <form action=""name="formulario" id='formContact'>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 </div>
-                <input type="text" class="form-control" placeholder="Asunto">
+                <input type="text" name='matter' id='matter' class="form-control" placeholder="Asunto">
               </div>  
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 </div>
-                <input type="text" class="form-control" placeholder="Nombre y Apellido">
+                <input type="text" name="name" id='name1' class="form-control" placeholder="Nombre y Apellido">
               </div>  
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 </div>
-                <input type="email" class="form-control" placeholder="ejemplo@gmail.com">
+                <input type="email" id='email1'name="email"required  class="form-control"  placeholder="ejemplo@gmail.com"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+                <a id='resultado'></a>
               </div>
               <div class="input-group mb-3">
-                <div class="input-group-prepend">
+                <div class="input-group-prepend" >
                 </div>
-                <input type="email" class="form-control" placeholder="Telefono">
+                <input  id="phone" type="text"name="phone"  class="form-control"name="phone" pattern="\x2b[0-9]+" size="15" placeholder="+5493816284353" required>
               </div>
               <div class="input-group">
-                <textarea class="form-control" aria-label="With textarea" placeholder="Comentario"></textarea>
+                <textarea id='message' name="message" class="form-control" minlength="10" maxlength="200"required aria-label="With textarea" placeholder="Comentario"></textarea>
               </div>
-              <button class="col-12 btn btn-primary btn-block mb-3 mt-3 ">
-                Enviar mensaje
-              </button>
+              <input type="submit" id='sendConsulta' class="col-12 btn btn-primary btn-block mb-3 mt-3">
+              </input>
             </form>
           </div>
           <div class="col-lg-6 align-self-center">
@@ -295,7 +295,22 @@
           </div>
         </div>
       </div>
-    </footer>  
+    </footer>
+    <!-- Email de form Contacto   -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_x9uQAoJjR4VTAtwZGaaXR");
+})();
+</script>
+    <!-- Email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_7xNf2NoHYrlY7S0wUd9Nr");
+})();
+</script>
+<!-- fin email -->
     <script src="js/registro.js"></script>
     <script src="/js/search.js"></script>
     <!--Bootstrap Js  -->
