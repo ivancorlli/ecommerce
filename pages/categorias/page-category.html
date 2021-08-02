@@ -10,54 +10,57 @@
     <link rel="stylesheet" href="/css/style.css">
     
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="shortcut icon" href="./assets/logo/ecomprasN.svg" type="image/x-icon">
+<link rel="shortcut icon" href="/assets/logo/ecompras(1).svg" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-    <!-- inicia el navbar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #2A324B;"> 
-      <div class="container-fluid">
-        <nav class="navbar navbar-light " style="background-color:#2A324B";>
-          <div class="container">
-            <a class="navbar-brand" href="#">
-              <img src="/assets/logo/ecompras(1).svg" alt="Logo" class="w-50">
-            </a>
-          </div>
-        </nav>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item d-flex">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-c3">
+      <div class="container-fluid ">
+        <a class="w-25" href="/index.html">
+          <img class="img-fluid w-75"  src="/assets/logo/ecompras(1).svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav text-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/index.html/#contacto">Contacto</a>
+              <a class="nav-link" href="/pages/nosotros/about-us.html">Nosotros</a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="#">Nosotros</a>
+            <li class="nav-item">
+              <a id="boton" href="/pages/login/login.html" class="btn  btn-danger my-2 mx-lg-2 fw-bold" type="button">Iniciar</a>
             </li>
-          </ul>
-          <form class="d-flex mx-4">
-            <button id="boton" href="/LogIn.html" class="btn navbar btn-danger mx-lg-2 fw-bold" type="submit">Iniciar</button>
-           <!-- ///////////////////////MODAL REGISTER//////////////////// -->
-
-        <!-- Button trigger modal -->
-            <button type="button" id="boton" class="btn btn-warning fw-bold boton-suscribe text-white" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
+            <li class="nav-item">
+              <button type="button" id="boton" class="btn btn-warning my-2 fw-bold boton-suscribe text-white" data-bs-toggle="modal"
+            data-bs-target="#registrarse">
             Registrarse
             </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-      <div class="text-center bg-dark">
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  <main >
+
+
+      <section class="d-flex mx-4">
+      <div class="text-center">
+        <div class="modal fade" id="registrarse" tabindex="-1" aria-labelledby="registrarseLabel"
           aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content background-modal">
               <!-- HEADER MODAL -->
               <div class="modal-header">
                 <a href="#" class="modal-register">
-                  <h5 class="modal-title " id="exampleModalLabel"><img src="/assets/logo/ecomprasN.svg"
+                  <h5 class="modal-title " id="registrarseLabel"><img src="/assets/logo/ecomprasN.svg"
                       alt="" width="80px"></h5>
                 </a>
 
@@ -67,114 +70,43 @@
               <div class="modal-body text-modal-body fw-normal">
                 <form class="row g-3">
                   <div class="col-12">
-                    <label for="inputAddress" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Enter your name">
+                    <label for="inputAddress" class="form-label" >Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                   </div>
                   <div class="col-12">
                     <label for="inputAddress2" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Enter your surname">
+                    <input type="text" class="form-control" id="subname" placeholder="Enter your surname" required>
                   </div>
                   <div class="col-md-12">
-                    <label for="inputState" class="form-label">Genero</label>
-                    <select id="inputState" class="form-select">
-                      <option selected>Elegir...</option>
-                      <option>Hombre</option>
-                      <option>Mujer</option>
-                      <option>Otro</option>
-
-                    </select>
-                  </div>
-                  <div class="col-md-12">
-                    <label for="inputEmail4" class="form-label">Nombre de Usuario</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Example;lb4123">
+                    <label for="inputEmail4" class="form-label" >Correo Electronico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Example luis@hotmail.com" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
 
 
                   </div>
 
                   <div class="col-md-12">
                     <label for="inputPassword4" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4">
-                  </div>
-
-                  <div class="col-md-12">
-                    <label for="inputPassword4" class="form-label">Confirmar Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4">
-                  </div>
-
-                  <div class="col-md-12">
-                    <label for="inputState" class="form-label">Provincia</label>
-                    <select id="inputState" class="form-select">
-                      <option selected>Choose...</option>
-                      <option>Buenos Aires</option>
-                      <option>Catamarca</option>
-                      <option>Chaco</option>
-                      <option>Chubut</option>
-                      <option>Cordoba</option>
-                      <option>Corriente</option>
-                      <option>Entre Ríos</option>
-                      <option>Formosa</option>
-                      <option>Jujuy</option>
-                      <option>La Pampa</option>
-                      <option>La Rioja</option>
-                      <option>Mendoza</option>
-                      <option>Misiones</option>
-                      <option>Neuquén</option>
-                      <option>Rio Negro</option>
-                      <option>Salta</option>
-                      <option>San Juan</option>
-                      <option>San Luis</option>
-                      <option>Santa Cruz</option>
-                      <option>Santa Fe</option>
-                      <option>Santiago del Estero</option>
-                      <option>Tierra del Fuego</option>
-                      <option>Tucumán</option>
-                    </select>
-                  </div>
-                  <div class="col-md-12">
-                    <label for="inputZip" class="form-label">Localidad</label>
-                    <input type="text" class="form-control" id="inputZip">
-                  </div>
-                  <div class="col-5 mt-5">
-                    <div class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                      <label class="form-check-label" for="flexSwitchCheckDefault">No soy un robot</label>
-                    </div>
-                  </div>
-                  <div class="form-check mt-2 mb-2 col-9">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                    <label class="form-check-label " for="flexCheckChecked">
-                      ¿Quieres recibir notificaciones?
-                    </label>
+                    <input type="password" class="form-control" id="password" required>
                   </div>
                   <div class="col-12">
-                    <button type="submit" class="btn btn-primary btn-sing-in">Registrarse</button>
+                    <button class="btn btn-primary fw-bold mt-2" id="btnSubmit" onclick="registrarUsuario();" 
+                     >Registrarse</button>
                   </div>
                 </form>
               </div>
               <!-- FOOTER MODAL -->
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal">Cerrar</button>
-
               </div>
             </div>
           </div>
-        </div>
-      </div>
-  </div>
-</div>
-
-<!-- ////////////////////////////FIN MODAL REGISTER///////////////////// -->
-          </form>
-        </div>
-      </div>
-    </nav>
-<!-- terminnar el navbar -->
-  </header>
+        </div> 
+      </section>
     <!-- Seccion Categorias -->
     <section class="container text-center">
       <div>
       <div class="row">
-      <div class=" bg-light p-3">
+      <div class=" p-3">
         <h4 class="text-dark m-4">Electrodomesticos
         </h4>
         <div class="row">
@@ -240,57 +172,53 @@
       </div>
       </div>
     </div></div></div></section>
+  </main>
     <!-- footer -->
-    <footer class="bg-secondary text-dark mt-5">
+    <footer class="bg-c3 text-w ">
       <div class="container">
         <div class="row">
-          <a href="/index.html"class="col-12 col-sm-4 text-reset text-uppercase d-flex align-items-center text-center">
-            <div class="col-12 col-sm-3 text-center">
+          <a href="/index.html"class="col-12 col-sm-4 text-w text-uppercase d-flex align-items-center text-center">
               <img
                 src="/assets/logo/ecompras(1).svg"
-                class="logoEcommerce"
+                class="logoEcommerce w-75 mt-3 ms-5"
                 alt="logo de Ecommerce"/>
-            </div>
           </a>
           <ul class="col-12 col-sm-4 list-unstyled col-lg align-items-center mt-2 text-center">
             <li class="font-weight-bold text-uppercase text-center">
               Seguinos
             </li>
             <li>
-              <a href="https://www.facebook.com/"target="_blank"class="text-reset text-center">
+              <a href="https://www.facebook.com/"target="_blank"class=" text-center text-w">
                 <i class="fab fa-facebook-f"></i> Facebook</a>
             </li>
             <li>
               <a href="https://www.Instagram.com/"target="_blank"
-                class="text-reset text-center">
+                class=" text-center text-w">
                 <i class="fab fa-instagram"></i> Instagram</a>
             </li>
-            <li>
-              <a href="https://www.Twitter.com/"target="_blank" class="text-reset text-center">
+            <li >
+              <a href="https://www.Twitter.com/"target="_blank" class=" text-center text-w">
                 <i class="fab fa-twitter"></i> Twitter</a>
             </li>
           </ul>
           <ul
             class="col-12 col-sm-4 list-unstyled col-lg align-items-center mt-2 text-center">
             <li>
-              <a href="#" class="text-reset text-center">Privacidad</a>
+              <a href="/pages/error404.html" class=" text-center text-w">Privacidad</a>
             </li>
             <li>
-              <a href="/about-us.html" class="text-reset text-center">Acerca de nosotros</a>
+              <a href="/pages/about-us.html" class=" text-center text-w">Acerca de nosotros</a>
             </li>
             <li>
-              <a href="#"  class="text-reset text-center">Ayuda</a>
-            </li>
-            <li>
-              <a href="#"  class="text-reset text-center">Contacto</a>
+              <a href="/pages/error404.html"  class="text-center text-w">Ayuda</a>
             </li>
           </ul>
-          <div class="col-12 text-center bg-secondary">
+          <div class="col-12 text-center ">
           <p>&copy; Copyright <a id="copyright" >2021 Ecompras S.R.L.</a></p>
           </div>
         </div>
       </div>
-    </footer>  
+    </footer> 
 
     <script src="/js/app.js"></script>
     <!--Bootstrap Js  -->

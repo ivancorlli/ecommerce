@@ -1,8 +1,8 @@
 // Accedemos a todos los forms
 const form =  document.querySelectorAll('#formProduct input, select, textarea')
 let productList = [];
-let btnSave = document.querySelector('#saveProduct');
-let btnClose = document.querySelector('#close');
+const btnSave = document.querySelector('#saveProduct');
+const btnClose = document.querySelector('#close');
 const expres = {
     text: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
     numbers: /^\d{0,14}$/ // 0 a 14 numeros.
@@ -45,7 +45,8 @@ function getProduct(){
     return productList;
 }
 
-productTable();
+let list = getProduct();
+productTable(list);
 
 
 btnSave.addEventListener('click', saveProduct);
@@ -89,14 +90,13 @@ function saveProduct (){
         data.push(el.value);
     }
     createProduct(data[0],data[1],data[2],data[3],data[4],data[5]) 
-    productTable();
+    productTable(list);
     reset(); 
 }
 
 // funcion para renderizar productos en lista
-function productTable (){
-    let list = getProduct(); 
-    console.log(list);
+function productTable (list){
+     
     tbody = document.querySelector('#myProducts tbody');
     tbody.innerHTML = '';
     for (let i=0; i<list.length; i++){
@@ -151,17 +151,9 @@ form.forEach(el => {
     checkSave()
 }
 
-//Validación LogIn
-function validarLogIn(){
-    var idemail, password1;
-    idemail = document.getElementById("emailLogIn").value;
-    password1 = document.getElementById("passwordLogIn").value;
-  
-    if(idemail=="" || password1==""){
-      alert("Todos los campos son obligatorios. Por favor, completalos e intentá nuevamente");
-      return false;
-    }
-  }
+
+
+
 
 
 
