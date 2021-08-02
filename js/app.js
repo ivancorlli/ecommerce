@@ -151,6 +151,29 @@ form.forEach(el => {
     checkSave()
 }
 
+// Busqueda en array de Elementos.
+let search = document.querySelector('.search');
+
+search.addEventListener('keyup', function(){
+    productList = JSON.parse(localStorage.getItem("product"));
+    // valor que ingreso en el input
+    let searchValue = search.value.toLowerCase();
+    console.log(searchValue)
+    // nuevo array que se ingresa.
+    let newArray = [];
+    productList.forEach(function (el){
+        if(el.toLowerCase().includes(searchValue)){
+            newArray.push(el);
+        }
+    })
+    if(newArray.length > 0){
+        productList = newArray;
+    }
+    productTable();
+    console.log(productList);
+});
+
+
 //Validación LogIn
 function validarLogIn(){
     var idemail, password1;
@@ -188,7 +211,7 @@ formulario.addEventListener ('submit', validar);
 // Enviar email al administrador
 
 var params = {
-  from: document.getElementById("email").value,
+  from: document.querySelector("#email").value,
   to: "pablomcoronel1369@gmail.com",
   mensaje: document.getElementById("massage").value,
 };
