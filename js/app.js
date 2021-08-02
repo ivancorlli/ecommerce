@@ -96,7 +96,6 @@ function saveProduct (){
 // funcion para renderizar productos en lista
 function productTable (){
     let list = getProduct(); 
-    console.log(list);
     tbody = document.querySelector('#myProducts tbody');
     tbody.innerHTML = '';
     for (let i=0; i<list.length; i++){
@@ -156,21 +155,23 @@ let search = document.querySelector('.search');
 
 search.addEventListener('keyup', function(){
     productList = JSON.parse(localStorage.getItem("product"));
+    console.log(productList)
     // valor que ingreso en el input
     let searchValue = search.value.toLowerCase();
     console.log(searchValue)
     // nuevo array que se ingresa.
     let newArray = [];
     productList.forEach(function (el){
-        if(el.toLowerCase().includes(searchValue)){
+        if(el.name.toLowerCase().includes(searchValue)){
             newArray.push(el);
         }
+                
     })
+    console.log(newArray)
     if(newArray.length > 0){
         productList = newArray;
     }
     productTable();
-    console.log(productList);
 });
 
 
