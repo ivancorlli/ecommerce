@@ -121,59 +121,46 @@
         <canvas id="viewGraph"></canvas>
       </div>
       <div class="container-fluid">
-        <span class="">Que tan activos han estado los usuarios ?</span>
+        <span class="fw-bold fs-4">Que tan activos han estado los usuarios ?</span>
         <div class="row">
           <!-- Columna 1 -->
           <div class=" col-12 my-4">
             <!-- Fila 1 -->
             <div class="row justify-content-center">
               <!-- carta 1 -->
-              <div class="col-12 col-sm-3 my-1">
+              <div class="col-12 col-lg-3 my-1">
                 <div class="card h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's content.</p>
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Venntas</h5>
+                    <span class="text-muted">Venntas realizadas en el ultimo mes.</span>
+                    <p id="sales" class="card-text text-success display-3 my-4 fw-bold">+2000</p>
                   </div>
                 </div>
               </div>
               <!-- carta 2 -->
-              <div class="col-12 col-sm-3 my-1">
+              <div class="col-12 col-lg-3 my-1">
                 <div class="card h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's content.</p>
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Pendientes</h5>
+                    <span class="text-muted">Paquetes por enviar.</span>
+                    <p id="sale2" class="card-text text-warning display-3 my-5 fw-bold">+100</p>
                   </div>
                 </div>
               </div>
               <!-- carta 3 -->
-              <div class="col-12 col-sm-3 my-1">
+              <div class="col-12 col-lg-3 my-1">
                 <div class="card h-100">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's content.</p>
+                    <h5 class="card-title">Dispositivos</h5>
+                    <canvas id="deviceGraph"></canvas>
                   </div>
                 </div>
               </div>
-              <!-- Carta 4 -->
-              <div class="col-12 col-sm-3 my-1">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's content.</p>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
-  
+          
+          
   
           <!-- Fila 2 -->
           <div class="row justify-content-center">
@@ -227,14 +214,14 @@
                 <div class="tab-pane fade" id="usuario" role="tabpanel" aria-labelledby="usuario-tab">
                   <div class="row">
                     <h4 class="text-center border-bottom p-2 border-dark mt-3"> Todos los usuarios</h4>
-                    <div class="mb-3">
-                      <input type='text' placeholder="Buscar" name='search' class="search form-control text-center">
-                    </div>
+                    
                     <table class="table table-hover" id="myUsersList">
                       <thead class="text-center">
                         <tr>
                           <th>Nombre</th>
                           <th>Apellido</th>
+                          <th>Email</th>
+                          <th>Acciones</th>
                           <th>Status</th>
                         </tr>
                       </thead>
@@ -347,13 +334,13 @@
         <ul
           class="col-12 col-sm-4 list-unstyled col-lg align-items-center mt-2 text-center">
           <li>
-            <a href="/pages/error404.html" class=" text-center text-w">Privacidad</a>
+            <a href="/pages/error404.html" class=" text-center text-w" target="blank">Privacidad</a>
           </li>
           <li>
             <a href="/pages/about-us.html" class=" text-center text-w">Acerca de nosotros</a>
           </li>
           <li>
-            <a href="/pages/error404.html"  class="text-center text-w">Ayuda</a>
+            <a href="/pages/error404.html"  class="text-center text-w" target="blank">Ayuda</a>
           </li>
         </ul>
         <div class="col-12 text-center ">

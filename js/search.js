@@ -57,9 +57,9 @@ function showProducts (product){
         let div1 = document.createElement("div");
         let div2 = document.createElement("div");
         let col = document.createElement("div");
-        col.classList.add('col-12','col-sm-4')
+        col.classList.add( 'col-12','col-sm-4')
         let colProduct = document.createElement("div");
-        colProduct.classList.add('product-card')
+        colProduct.classList.add('product-card','p-2')
         let spanTitle = document.createElement('span')
         spanTitle.classList.add('fw-bold','fs-5','my-2')
         let spanPrice = document.createElement('span')
@@ -77,10 +77,10 @@ function showProducts (product){
         btnProduct.setAttribute('target', 'blank')
         div1.appendChild(spanTitle); 
         div2.appendChild(spanPrice);
-        showProduct.appendChild( col).appendChild(div1)
-        showProduct.appendChild( col).appendChild(imgProduct)  
-        showProduct.appendChild( col).appendChild(div2)
-        showProduct.appendChild( col).appendChild(btnProduct)
+        showProduct.appendChild( col).appendChild(colProduct).appendChild(div1)
+        showProduct.appendChild( col).appendChild(colProduct).appendChild(imgProduct)  
+        showProduct.appendChild( col).appendChild(colProduct).appendChild(div2)
+        showProduct.appendChild( col).appendChild(colProduct).appendChild(btnProduct)
     });
 
 }

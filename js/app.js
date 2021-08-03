@@ -15,6 +15,8 @@ let fields = {
     price : false,
     stock : false
 }
+
+
 class Product{
     constructor (code,name,image,category,price,stock,description){
         this.code = code;
@@ -28,6 +30,7 @@ class Product{
 }
 function createProduct (code,name,image,category,price,stock,description){
     // Deocomprimimos los datos para crear el producto
+    
     product = new Product (code,name,image,category,price,stock,description);
     // Los datos se guardan en el local
     productList.push(product);
@@ -50,8 +53,12 @@ function getProduct(){
     return productList;
 }
 
+    
+
 list = getProduct();
 productTable (list)
+
+
 
 
 btnSave.addEventListener('click', saveProduct);
@@ -216,24 +223,41 @@ function changeElement() {
 */
 
 ///////////////////////////// USER /////////////////////////////
-let userLists = getUserList()
-userTable(userLists)
+let userList = getUserList()
+userTable(userList)
 
 
 
 const selectStatus  = document.querySelectorAll('.statusUser');
 
+selectStatus.forEach(option => {
+    option.addEventListener('change', () =>{
+        let value = option.value
+        let att = option.getAttribute('name')
+        switch(value){
+            case "pending":{
+                let op = document.querySelector(`.status-${att}`)
+                op.setAttribute('status','pending')
+                op.classList.add('text-warning')
+                op.classList.remove('text-success')
+                op.innerHTML = '<i class="fas fa-grip-lines">'
+                break;
+            }
+            case "approved":{
+                let op = document.querySelector(`.status-${att}`)
+                op.setAttribute('status','approved')
+                op.classList.add('text-success')
+                op.classList.remove('text-warning')
+                op.innerHTML = '<i class="fas fa-check"></i>'
+                break;
+            }
 
-console.log(selectStatus)
-statusApproved()
-function statusApproved () {
-     selectStatus.forEach(el =>{
-         console.log(el.value)
-         if(el.value == "approved"){
+        }
+        
+    })
+})
 
-         }
-     })
-}
+
 function getUserList(){
     let el = localStorage.getItem('users');
     let userList = [];
@@ -252,21 +276,51 @@ function userTable (filter){
         let row = tbody.insertRow(i),
         nombreCell= row.insertCell(0);
         apellidoCell= row.insertCell(1);
-        optionCell= row.insertCell(2);
-        statusCell= row.insertCell(3);
+        emailCell= row.insertCell(2);
+        optionCell= row.insertCell(3);
+        statusCell= row.insertCell(4);
 
         nombreCell.innerHTML = flag[i].nameUser;
         apellidoCell.innerHTML = flag[i].subname;
-        optionCell.innerHTML = '<select class="statusUser" name="statusUser" ><option value="pending">Pending</option><option value="approved">Approved</option></select>'         
-        switch(flag[i].status){
-        case "pending":
-            statusCell.innerHTML = `<a status  class=" text-warning"><i class="fas fa-grip-lines"></i></a>`
-            break;
-        case "approved":
-            statusCell.innerHTML = `<a  class=" text-success"><i class="fas fa-check"></i></a>`
-            break;
-        }
+        emailCell.innerHTML = flag[i].email;
+        optionCell.innerHTML = `<select class="statusUser" name="${flag[i].nameUser}" ><option value="pending">Pending</option><option value="approved">Approved</option></select>` 
+        statusCell.innerHTML = `<a class="status-${flag[i].nameUser} text-warning"><i class="fas fa-grip-lines"></i></a>`
+            
+        
 
         tbody.appendChild(row);
     }}
 
+
+///////////////////////////// GRAFICO //////////////////////////////////////////////
+const deviceGraph = document.getElementById('deviceGraph');
+const device = ['desktop','movil','tablet'];
+const deviceData = {
+    label: "Visitas por mes",
+    data: [1500, 1000, 2000], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor:[ 
+        'rgba(54, 162, 235, 1)',
+        'rgba(54, 12, 235, 1)',
+        'rgba(54, 9, 35, 1)'
+] // Color de fondo
+    
+};
+new Chart(deviceGraph, {
+    type: 'doughnut',// Tipo de gráfica
+    data: {
+        labels: device,
+        datasets: [
+            deviceData,
+            // Aquí más datos...
+        ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {beginAtZero: true},
+                
+            }]
+        }
+        
+    }
+});

@@ -6,6 +6,7 @@
     --color-2:#2A324B;
     --color-3:#FFC857;
     --color-4:#ED254E;
+    --bg-light:#2a324b4a;
 }
 
 body{
@@ -64,6 +65,16 @@ body{
 .input-product::placeholder{
     margin-top: 1rem;
     font-size: 0.8rem;
+}
+#searchProduct{
+    background-color: cornsilk;
+    outline: none;
+    border-radius: 1rem;
+}
+.product-card{
+    padding: 1rem 1.5rem;
+    margin: 0.3rem 1rem;
+    border-radius: 1rem;
 }
 /* //////////////////////////////////////////////// */
 .container {
@@ -127,10 +138,7 @@ body{
 .text-w:hover{
     color:wheat;
 }
-/* .logoEcommerce {
-  width: 15rem;
-  margin-top: 5%;
-} */
+
 /* Game */
 .bloque{
     display: flex;
@@ -187,11 +195,10 @@ body{
     box-shadow: 0px 0px 9px rgba(0,0,0,35);
   }
   .media {
-    background-color: #2A324B;
-    padding-top: 20px;
+    background-color:var(--color-2);
+    border-radius: 15px;
+    padding: 20px;
     width: 850px;
-    
-    
   }
   .media .nombre {
     color:  #aa892e;
