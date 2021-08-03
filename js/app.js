@@ -164,8 +164,11 @@ search.addEventListener('keyup', function(){
     // nuevo array que se ingresa.
     let newArray = [];
     productList.forEach(function (el){
-        if(el.name.toLowerCase().includes(searchValue)){
-            newArray.push(el);
+        if (
+          el.name.toLowerCase().includes(searchValue) ||
+          el.category.toLowerCase().includes(searchValue)
+        ) {
+          newArray.push(el);
         }
                 
     })
