@@ -16,18 +16,19 @@ let fields = {
     stock : false
 }
 class Product{
-    constructor (code,name,category,price,stock,description){
+    constructor (code,name,image,category,price,stock,description){
         this.code = code;
         this.name = name;
+        this.image = image;
         this.category = category;
         this.price = price; 
         this.stock = stock;
         this.description = description;
     }
 }
-function createProduct (code,name,category,description,price,stock){
+function createProduct (code,name,image,category,price,stock,description){
     // Deocomprimimos los datos para crear el producto
-    product = new Product (code,name,category,description,price,stock);
+    product = new Product (code,name,image,category,price,stock,description);
     // Los datos se guardan en el local
     productList.push(product);
     setProduct(productList);
@@ -93,8 +94,9 @@ function saveProduct (){
     for (el of form){
         // Mandamos los datos al array 
         data.push(el.value);
+        console.log(data)
     }
-    let sis = createProduct(data[0],data[1],data[2],data[3],data[4],data[5]) 
+    createProduct(data[0],data[1],data[2],data[3],data[4],data[5]) 
     // console.log(sis.length)
     productTable(list);
     reset(); 
