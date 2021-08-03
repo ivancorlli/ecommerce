@@ -1,8 +1,10 @@
 // Accedemos a todos los forms
 const form =  document.querySelectorAll('#formProduct input, select, textarea')
 let productList = [];
-let btnSave = document.querySelector('#saveProduct');
-let btnClose = document.querySelector('#close');
+let list = [];
+let product;
+const btnSave = document.querySelector('#saveProduct');
+const btnClose = document.querySelector('#close');
 const expres = {
     text: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
     numbers: /^\d{0,14}$/ // 0 a 14 numeros.
@@ -25,10 +27,12 @@ class Product{
 }
 function createProduct (code,name,category,description,price,stock){
     // Deocomprimimos los datos para crear el producto
-    let product = new Product (code,name,category,description,price,stock);
+    product = new Product (code,name,category,description,price,stock);
     // Los datos se guardan en el local
     productList.push(product);
     setProduct(productList);
+
+    return product;
 }
 // Cargar productos al Local
 function setProduct(item){
@@ -45,7 +49,8 @@ function getProduct(){
     return productList;
 }
 
-productTable();
+list = getProduct();
+productTable (list)
 
 
 btnSave.addEventListener('click', saveProduct);
@@ -82,24 +87,25 @@ form.forEach((input) => {
 
 function saveProduct (){
     getProduct ();
+    list = getProduct()
     let data = [];
     // Accedemos al valor de cada input escrito
     for (el of form){
         // Mandamos los datos al array 
         data.push(el.value);
     }
-    createProduct(data[0],data[1],data[2],data[3],data[4],data[5]) 
-    productTable();
+    let sis = createProduct(data[0],data[1],data[2],data[3],data[4],data[5]) 
+    // console.log(sis.length)
+    productTable(list);
     reset(); 
 }
 
 // funcion para renderizar productos en lista
-function productTable (){
-    let list = getProduct(); 
-    console.log(list);
+function productTable (filter){
+    let flag = filter;
     tbody = document.querySelector('#myProducts tbody');
     tbody.innerHTML = '';
-    for (let i=0; i<list.length; i++){
+    for (let i=0; i<flag.length; i++){
         let row = tbody.insertRow(i),
         codigoCell= row.insertCell(0);
         nombreCell= row.insertCell(1);
@@ -110,12 +116,11 @@ function productTable (){
         
     
 
-        codigoCell.innerHTML = list[i].code;
-        nombreCell.innerHTML = list[i].name;
-        categoriaCell.innerHTML = list[i].category;
-        precioCell.innerHTML = list[i].price;
-        stockCell.innerHTML = list[i].stock;
-        
+        codigoCell.innerHTML = flag[i].code;
+        nombreCell.innerHTML = flag[i].name;
+        categoriaCell.innerHTML = flag[i].category;
+        precioCell.innerHTML = flag[i].price;
+        stockCell.innerHTML = flag[i].stock;
 
         tbody.appendChild(row);
     }
@@ -154,19 +159,29 @@ form.forEach(el => {
     });
     checkSave()
 }
+let search = document.querySelector('.search')
+search.addEventListener('keyup', function(){
+    productList = JSON.parse(localStorage.getItem("product"));
+    // valor que ingreso en el input
+    let searchValue = search.value.toLowerCase();
+    // nuevo array que se ingresa.
+    let newArray = [];
+    productList.forEach(function (el){
+        if (
+          el.name.toLowerCase().includes(searchValue) ||
+          el.category.toLowerCase().includes(searchValue)
+        ) {
+          newArray.push(el);
+        }
+                
+    })
+    productTable(newArray);
+});
 
-//Validación LogIn
-function validarLogIn(){
-    var idemail, password1;
-    idemail = document.getElementById("emailLogIn").value;
-    password1 = document.getElementById("passwordLogIn").value;
-  
-    if(idemail=="" || password1==""){
-      alert("Todos los campos son obligatorios. Por favor, completalos e intentá nuevamente");
-      return false;
-    }
 
-  }
+
+
+
 
 
 
