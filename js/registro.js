@@ -30,11 +30,32 @@ function registrarUsuario() {
            console.log('FAILED...', error);
         });
     
-   
+
+function saveUser() {
+    let newUser = {}
+    for(el of oldUser) {        
+        newUser[el.getAttribute('name')] = el.value;
+    }
+    console.log(oldUser);
+    localStorage.setItem('newUser', JSON.stringify(newUser));
+}
+
+}
+function validarLogIn(){
+    var idemail, password1;
+    idemail = document.getElementById("emailLogIn").value;
+    password1 = document.getElementById("passwordLogIn").value;
+    if(idemail=="" || password1==""){
+      alert("Todos los campos son obligatorios. Por favor, completalos e intentá nuevamente");
+      return false;
+    }
+    else{
+        alert("¡Bienvenido Nuevamente "+  emailLogIn.value + "!")
+        window.open(href="/pages/administrador/admin.html")
+    }
 }
 
 
-  
         
     
 

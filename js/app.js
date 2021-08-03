@@ -124,7 +124,7 @@ function productTable (filter){
         selectCell= row.insertCell(5);
         selectCell.innerHTML=`<button type="button" class="btn btn-warning" onclick="changeElement()"> EDITAR</button>
                               <button type="button" class="btn btn-danger" onclick="deleteRow()">ELIMINAR</button>
-                              <button type="button" class="btn btn-success" >FAVORITO</button>`
+                              <button type="button" class="btn btn-success" onclick="fav()">FAVORITO</button>`
     
 
         codigoCell.innerHTML = flag[i].code;
@@ -136,6 +136,9 @@ function productTable (filter){
         tbody.appendChild(row);
     }
 }
+
+
+
 function checkInput (type,input,field){
     if(type.test(input)){
         // Si la valdacion coincide con el valor ingresado en el input le aplicamos la clase
@@ -188,12 +191,10 @@ search.addEventListener('keyup', function(){
 });
 
 
-
-function deleteRow(index) {
-    if (index !=undefined) {
-        productList.splice(index,4);
-    } else {
-        productList= [];
+function deleteRow() {
+    alert("Estás a punto de eliminar esta fila.");
+    for (item in productList) {
+        productList=[]
     }
     //Una vez modificado el array lo guardo y vuelvo a renderizar los elementos
     localStorage.setItem('item', JSON.stringify(productList)); //guardo
@@ -201,26 +202,19 @@ function deleteRow(index) {
 }
 
 
-/*
-var myModal = new bootstrap.Modal(document.getElementById('cambiarValor'), {});
-
-function abrirModal(id) {
-    console.log(myModal);
-    myModal._dialog.setAttribute('element-to-change', id);
-    myModal.show();
+function fav(){
+    addEventListener("click", () =>{
+        console.log(list.parentNode.parentNode)
+    })
+    
 }
 
-function changeElement() {
-    let newValue = document.getElementById('new-value').value;
-    let index = myModal._dialog.getAttribute('element-to-change');
-    arrayListaSuper[index] = newValue;
-    console.log(arrayListaSuper);
-    renderizarLista();
-    myModal.hide();
-}
+// (document.addEventListener('onclick', '.borrar', function (event) {
+//     event.preventDefault();
+//     $(this).closest('tr').remove();
+// }))
 
 
-*/
 
 ///////////////////////////// USER /////////////////////////////
 let userList = getUserList()
@@ -324,3 +318,39 @@ new Chart(deviceGraph, {
         
     }
 });
+   
+
+// Validacion de Formulario de Contacto.
+  let validarCampo = function (e) {
+    if (
+      formulario.name.value == 0 ||
+      formulario.matter.value == 0 ||
+      formulario.message.value == 0
+    ) {
+      alert("Debe completar todos los campos");
+      }
+  };
+  let validar = function (e) {
+    validarCampo(e);
+    alert("El email fue enviado con exito.");
+  };
+  formulario.addEventListener("submit", validar);
+
+
+// Enviar email al administrador
+
+var params = {
+  from: `document.getElementById("name").value`,
+  to: "pablomcoronel1369@gmail.com",
+  mensaje: `Nueva consulta ${matter.value}${message.value}${phone.value}${email1.value}`,
+};
+  
+emailjs.send("service_ysk1goe", "template_9pp3njm", params).then(
+   function (response) {
+     console.log("SUCCESS!", response);
+   },
+   function (error) {
+     console.log("FAILED...", error);
+   }
+);
+    
