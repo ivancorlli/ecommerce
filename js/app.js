@@ -203,7 +203,7 @@ function fav(){
 // Validacion de Formulario de Contacto.
 (function () {
   let matter = document.getElementById("matter");
-  let name = document.getElementById("name");
+  let name = document.getElementById("name1");
   let massage = document.getElementById("massage");
 
   let validarCampo = function (e) {
