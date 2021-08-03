@@ -127,6 +127,9 @@ function productTable (filter){
         tbody.appendChild(row);
     }
 }
+
+
+
 function checkInput (type,input,field){
     if(type.test(input)){
         // Si la valdacion coincide con el valor ingresado en el input le aplicamos la clase
@@ -184,9 +187,8 @@ search.addEventListener('keyup', function(){
 function deleteRow() {
     alert("Estás a punto de eliminar esta fila.");
     for (item in productList) {
-        productList= [];
+        productList=[]
     }
-    
     //Una vez modificado el array lo guardo y vuelvo a renderizar los elementos
     localStorage.setItem('items', JSON.stringify(productList)); //guardo
     productTable(); //renderizo otra vez
@@ -194,9 +196,16 @@ function deleteRow() {
 
 
 function fav(){
-    document.getElementsByClassName('fav').style.backgroundColor = "green";
+    addEventListener("click", () =>{
+        console.log(list.parentNode.parentNode)
+    })
+    
 }
 
+$(document).on('click', '.borrar', function (event) {
+    event.preventDefault();
+    $(this).closest('tr').remove();
+});
 
    
 

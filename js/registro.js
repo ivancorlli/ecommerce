@@ -29,7 +29,16 @@ function registrarUsuario() {
            console.log('FAILED...', error);
         });
     
-   
+
+function saveUser() {
+    let newUser = {}
+    for(el of oldUser) {        
+        newUser[el.getAttribute('name')] = el.value;
+    }
+    console.log(oldUser);
+    localStorage.setItem('newUser', JSON.stringify(newUser));
+}
+
 }
 function validarLogIn(){
     var idemail, password1;
@@ -44,6 +53,7 @@ function validarLogIn(){
         window.open(href="/pages/administrador/admin.html")
     }
 }
+
 
         
     
