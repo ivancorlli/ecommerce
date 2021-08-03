@@ -113,7 +113,9 @@ function productTable (filter){
         precioCell= row.insertCell(3);
         stockCell= row.insertCell(4);
         selectCell= row.insertCell(5);
-        
+        selectCell.innerHTML=`<button type="button" class="btn btn-warning" onclick="changeElement()"> EDITAR</button>
+                              <button type="button" class="btn btn-danger" onclick="deleteRow()">ELIMINAR</button>
+                              <button type="button" class="btn btn-success" >FAVORITO</button>`
     
 
         codigoCell.innerHTML = flag[i].code;
@@ -180,11 +182,35 @@ search.addEventListener('keyup', function(){
 
 
 
+function deleteRow(index) {
+    if (index !=undefined) {
+        productList.splice(index,4);
+    } else {
+        productList= [];
+    }
+    //Una vez modificado el array lo guardo y vuelvo a renderizar los elementos
+    localStorage.setItem('items', JSON.stringify(productList)); //guardo
+    productTable(); //renderizo otra vez
+}
 
 
+/*
+var myModal = new bootstrap.Modal(document.getElementById('cambiarValor'), {});
+
+function abrirModal(id) {
+    console.log(myModal);
+    myModal._dialog.setAttribute('element-to-change', id);
+    myModal.show();
+}
+
+function changeElement() {
+    let newValue = document.getElementById('new-value').value;
+    let index = myModal._dialog.getAttribute('element-to-change');
+    arrayListaSuper[index] = newValue;
+    console.log(arrayListaSuper);
+    renderizarLista();
+    myModal.hide();
+}
 
 
-
-
-
-
+*/
