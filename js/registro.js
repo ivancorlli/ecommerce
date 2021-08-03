@@ -1,15 +1,16 @@
 
 function registrarUsuario() {
     let oldUser = JSON.parse (localStorage.getItem("users")) || [];
-    let name = document.getElementById("name").value;
+    let nameUser = document.getElementById("nameUser").value;
     let subname= document.getElementById("subname").value;  
     let email= document.getElementById("email").value;
     let password= document.getElementById("password").value;
     let user = {
-        name,
+        nameUser,
         subname,
         email,
         password,
+        status: "pending"
     }
 
     
@@ -19,7 +20,7 @@ function registrarUsuario() {
     let params= {
         from: 'crisz_zanesky@hotmail.com',
         to: 'criszanesky18@gmail.com',
-        message: `Nuevo Usuario ${name} ${subname} ${email} ${password}`,
+        message: `Nuevo Usuario ${nameUser} ${subname} ${email} ${password}`,
     };
      
     emailjs.send('service_9n5wu8g', 'template_zy2hlk8', params)

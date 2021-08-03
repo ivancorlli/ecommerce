@@ -152,7 +152,6 @@ function checkSave (){
         btnSave.classList.add('disabled')
     }
 }
-
 function reset (){
 form.forEach(el => {
         let field = el.getAttribute('name')
@@ -176,8 +175,7 @@ search.addEventListener('keyup', function(){
           el.category.toLowerCase().includes(searchValue)
         ) {
           newArray.push(el);
-        }
-                
+        } 
     })
     productTable(newArray);
 });
@@ -191,7 +189,7 @@ function deleteRow(index) {
         productList= [];
     }
     //Una vez modificado el array lo guardo y vuelvo a renderizar los elementos
-    localStorage.setItem('items', JSON.stringify(productList)); //guardo
+    localStorage.setItem('item', JSON.stringify(productList)); //guardo
     productTable(); //renderizo otra vez
 }
 
@@ -216,3 +214,59 @@ function changeElement() {
 
 
 */
+
+///////////////////////////// USER /////////////////////////////
+let userLists = getUserList()
+userTable(userLists)
+
+
+
+const selectStatus  = document.querySelectorAll('.statusUser');
+
+
+console.log(selectStatus)
+statusApproved()
+function statusApproved () {
+     selectStatus.forEach(el =>{
+         console.log(el.value)
+         if(el.value == "approved"){
+
+         }
+     })
+}
+function getUserList(){
+    let el = localStorage.getItem('users');
+    let userList = [];
+    if(el == null){
+        userList = [];
+    } else{
+        userList= JSON.parse(el);
+    }
+    return userList;
+}
+function userTable (filter){
+    let flag = filter;
+    tbody = document.querySelector('#myUsersList tbody');
+    tbody.innerHTML = '';
+    for (let i=0; i<flag.length; i++){
+        let row = tbody.insertRow(i),
+        nombreCell= row.insertCell(0);
+        apellidoCell= row.insertCell(1);
+        optionCell= row.insertCell(2);
+        statusCell= row.insertCell(3);
+
+        nombreCell.innerHTML = flag[i].nameUser;
+        apellidoCell.innerHTML = flag[i].subname;
+        optionCell.innerHTML = '<select class="statusUser" name="statusUser" ><option value="pending">Pending</option><option value="approved">Approved</option></select>'         
+        switch(flag[i].status){
+        case "pending":
+            statusCell.innerHTML = `<a status  class=" text-warning"><i class="fas fa-grip-lines"></i></a>`
+            break;
+        case "approved":
+            statusCell.innerHTML = `<a  class=" text-success"><i class="fas fa-check"></i></a>`
+            break;
+        }
+
+        tbody.appendChild(row);
+    }}
+
