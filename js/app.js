@@ -210,11 +210,6 @@ $(document).on('click', '.borrar', function (event) {
    
 
 // Validacion de Formulario de Contacto.
-(function () {
-  let matter = document.getElementById("matter");
-  let name = document.getElementById("name1");
-  let massage = document.getElementById("massage");
-
   let validarCampo = function (e) {
     if (
       formulario.name.value == 0 ||
@@ -222,19 +217,19 @@ $(document).on('click', '.borrar', function (event) {
       formulario.message.value == 0
     ) {
       alert("Debe completar todos los campos");
-    }
+      }
   };
   let validar = function (e) {
     validarCampo(e);
     alert("El email fue enviado con exito.");
   };
   formulario.addEventListener("submit", validar);
-})()
+
 
 // Enviar email al administrador
 
 var params = {
-  from: `document.getElementById("name1").value`,
+  from: `document.getElementById("name").value`,
   to: "pablomcoronel1369@gmail.com",
   mensaje: `Nueva consulta ${matter.value}${message.value}${phone.value}${email1.value}`,
 };
@@ -247,3 +242,4 @@ emailjs.send("service_ysk1goe", "template_9pp3njm", params).then(
      console.log("FAILED...", error);
    }
 );
+    
