@@ -225,9 +225,9 @@ function fav(){
 // Enviar email al administrador
 
 var params = {
-  from: `document.getElementById("name").value`,
+  from: `document.getElementById("name1").value`,
   to: "pablomcoronel1369@gmail.com",
-  mensaje: `Nueva consulta ${matter.value}${message.value}${phone.value}${email.value}`,
+  mensaje: `Nueva consulta ${matter.value}${message.value}${phone.value}${email1.value}`,
 };
   
 emailjs.send("service_ysk1goe", "template_9pp3njm", params).then(
