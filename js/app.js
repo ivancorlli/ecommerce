@@ -107,14 +107,15 @@ function productTable (){
         precioCell= row.insertCell(3);
         stockCell= row.insertCell(4);
         selectCell= row.insertCell(5);
+        
+    
 
         codigoCell.innerHTML = list[i].code;
         nombreCell.innerHTML = list[i].name;
         categoriaCell.innerHTML = list[i].category;
         precioCell.innerHTML = list[i].price;
         stockCell.innerHTML = list[i].stock;
-        cell.innerHTML=`<a>Edit</a>
-                        <a>Delete</a>`;
+        
 
         tbody.appendChild(row);
     }
@@ -142,6 +143,7 @@ function checkSave (){
         btnSave.classList.add('disabled')
     }
 }
+
 function reset (){
 form.forEach(el => {
         let field = el.getAttribute('name')
@@ -163,6 +165,7 @@ function validarLogIn(){
       alert("Todos los campos son obligatorios. Por favor, completalos e intentá nuevamente");
       return false;
     }
+
   }
 
 
