@@ -35,7 +35,7 @@ function filterProduct (){
  let search = [];
    for(el of list){
        let product = el.name;   
-    if(Object.keys( searchProduct.value).length > 3){
+    if(Object.keys( searchProduct.value).length > 4){
        if(product.includes(searchProduct.value) ){
         search.push(el)} 
         }
